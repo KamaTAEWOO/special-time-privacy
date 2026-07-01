@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>개인정보처리방침 — 특별시 (Special Time)</title>
-  <meta name="description" content="특별시(Special Time) 앱의 개인정보처리방침. 앱은 사용자 정보를 외부로 전송하지 않으며 기기 내부에만 저장합니다." />
+  <meta name="description" content="특별시(Special Time) 앱의 개인정보처리방침. 커플 연결·실시간 동기화를 위해 Firebase(인증·클라우드 데이터베이스·푸시)를 사용하며 처리하는 정보와 이용자 권리를 설명합니다." />
   <meta name="robots" content="index, follow" />
   <style>
     :root {
@@ -107,55 +107,128 @@
 
   <div class="wrap">
     <main>
-      <p class="updated">최종 업데이트: 2026년 6월 13일</p>
+      <p class="updated">최종 업데이트: 2026년 7월 1일</p>
 
       <section>
         <h2>1. 개요</h2>
         <p>
           특별시(Special Time, 이하 "앱")는 예비 부부의 결혼 준비를 돕는 앱입니다.
-          본 방침은 앱이 사용자 정보를 어떻게 다루는지 설명합니다.
+          본 방침은 앱이 이용자의 정보를 어떻게 수집·이용·보관·파기하는지 설명합니다.
+          앱은 두 사람의 결혼 준비 데이터를 <strong>실시간으로 함께 보고 편집</strong>할 수
+          있도록 클라우드(Google Firebase)를 사용합니다.
         </p>
       </section>
 
       <section>
-        <h2>2. 수집하는 정보</h2>
-        <p>
-          현재 버전의 앱은 회원 가입·로그인 없이 동작하며, 사용자가 입력한 결혼 준비
-          정보(예산·일정·취향 등)는 <strong>기기 내부에만 저장</strong>되고 외부 서버로
-          전송되지 않습니다. 앱은 다음을 수집하지 않습니다.
-        </p>
+        <h2>2. 수집·처리하는 정보</h2>
+        <p>앱은 서비스 제공에 필요한 최소한의 정보를 처리합니다.</p>
+        <p><strong>가. 계정·인증 정보</strong></p>
         <ul>
-          <li>이름·이메일 등 개인 식별 정보</li>
-          <li>위치 정보</li>
-          <li>연락처·사진 등 기기 데이터</li>
+          <li>앱 실행 시 자동 생성되는 <strong>익명 계정 식별자(익명 UID)</strong> — 그 자체로는 개인을 식별하지 않습니다.</li>
+          <li>카카오 로그인 선택 시: 카카오 회원번호와 동의 범위의 프로필(닉네임·프로필 이미지)</li>
+          <li>Apple 로그인 선택 시: Apple 계정 식별자(선택 시 이름·이메일 릴레이 주소)</li>
+          <li>게스트(비로그인)로도 이용 가능하며, 이 경우 소셜 계정 정보는 수집하지 않습니다.</li>
+        </ul>
+        <p><strong>나. 이용자가 입력하는 결혼 준비 정보</strong></p>
+        <ul>
+          <li>이름 또는 표시명, 역할(신랑/신부/직접 입력), 결혼 예정일</li>
+          <li>커플 초대 코드 및 연결 관계(멤버 식별자)</li>
+          <li>예산 항목(구분·제목·금액·결제 상태·결제자·결제 예정일), 총예산·카테고리 한도</li>
+          <li>취향 월드컵 결과, 활동 내역(피드)</li>
+        </ul>
+        <p><strong>다. 기기·푸시 정보</strong></p>
+        <ul>
+          <li>푸시 알림 발송을 위한 <strong>푸시 토큰(FCM/APNs)</strong></li>
+        </ul>
+        <p><strong>라. 프로필 이미지</strong></p>
+        <ul>
+          <li>이용자가 직접 선택한 사진은 <strong>기기 내부</strong>에 저장되며, 카카오 프로필 이미지는 표시를 위해 내려받아 캐시할 수 있습니다.</li>
+        </ul>
+        <p>앱은 위치정보, 연락처, 통화기록 등 별도의 민감정보를 수집하지 않습니다.</p>
+      </section>
+
+      <section>
+        <h2>3. 이용 목적</h2>
+        <ul>
+          <li>커플 연결 및 두 사람 간 결혼 준비 데이터의 실시간 동기화</li>
+          <li>예산·일정·취향 등 핵심 기능 제공 및 화면 표시</li>
+          <li>결제 예정일 리마인더 등 알림 발송</li>
+          <li>오류 대응 및 서비스 유지·개선</li>
         </ul>
       </section>
 
       <section>
-        <h2>3. 권한</h2>
-        <p>앱은 별도의 민감 권한(위치·카메라·연락처 등)을 요구하지 않습니다.</p>
-      </section>
-
-      <section>
-        <h2>4. 제3자 공유</h2>
-        <p>앱은 사용자 정보를 제3자와 공유하지 않습니다.</p>
-      </section>
-
-      <section>
-        <h2>5. 아동의 개인정보</h2>
-        <p>앱은 만 14세 미만 아동을 주 대상으로 하지 않습니다.</p>
-      </section>
-
-      <section>
-        <h2>6. 변경 고지</h2>
+        <h2>4. 저장 위치 및 국외 이전</h2>
         <p>
-          향후 로그인·클라우드 동기화 등 기능이 추가되어 수집 항목이 바뀌면 본 페이지를
-          통해 사전 고지합니다.
+          앱의 클라우드 데이터는 Google이 운영하는 <strong>Firebase / Cloud Firestore</strong>에
+          저장·처리되며, Google의 인프라 특성상 <strong>국외 서버</strong>에 저장·처리될 수 있습니다.
+        </p>
+        <ul>
+          <li>위탁받는 자: Google LLC (Firebase Authentication, Cloud Firestore, Firebase Cloud Messaging)</li>
+          <li>이전되는 항목: 위 2항의 클라우드 저장 정보</li>
+          <li>이전 목적: 인증·데이터 동기화·푸시 발송</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. 제3자 제공 및 처리위탁</h2>
+        <p>
+          앱은 이용자의 정보를 광고 등 목적으로 제3자에게 판매·제공하지 않습니다.
+          다만 서비스 제공을 위해 아래 사업자의 기능을 이용(처리위탁)합니다.
+        </p>
+        <ul>
+          <li><strong>Google (Firebase)</strong> — 인증, 클라우드 데이터베이스, 푸시 메시지</li>
+          <li><strong>Kakao</strong> — 카카오 로그인(이용자가 선택한 경우)</li>
+          <li><strong>Apple</strong> — Apple 로그인(이용자가 선택한 경우)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. 접근 권한</h2>
+        <ul>
+          <li><strong>사진/미디어</strong>: 프로필 사진을 직접 선택할 때만 사용</li>
+          <li><strong>알림</strong>: 결제 리마인더 등 푸시 알림 수신에 사용</li>
+        </ul>
+        <p>권한은 기기 설정에서 언제든 철회할 수 있으며, 일부 기능이 제한될 수 있습니다.</p>
+      </section>
+
+      <section>
+        <h2>7. 보관 기간 및 파기</h2>
+        <ul>
+          <li>이용자가 입력한 정보는 서비스 이용 기간 동안 보관됩니다.</li>
+          <li>앱 내 <strong>회원 탈퇴</strong> 시 해당 계정 및 연결된 커플·예산·취향·활동 데이터를 삭제합니다.</li>
+          <li>커플 연결을 해제하면 관련 공유 데이터가 정리됩니다.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>8. 이용자의 권리</h2>
+        <p>
+          이용자는 앱 내 기능 또는 아래 연락처를 통해 자신의 정보에 대한 열람·수정·삭제 및
+          처리정지(탈퇴)를 요청할 수 있습니다.
         </p>
       </section>
 
       <section>
-        <h2>7. 문의</h2>
+        <h2>9. 아동의 개인정보</h2>
+        <p>앱은 만 14세 미만 아동을 주 대상으로 하지 않으며, 아동의 정보를 알면서 수집하지 않습니다.</p>
+      </section>
+
+      <section>
+        <h2>10. 안전성 확보 조치</h2>
+        <ul>
+          <li>전송 구간 암호화(HTTPS/TLS) 및 Firebase 보안 규칙을 통한 접근 통제</li>
+          <li>커플 데이터는 원칙적으로 해당 커플 구성원만 접근하도록 규칙으로 제한</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>11. 변경 고지</h2>
+        <p>본 방침이 변경되면 본 페이지를 통해 변경 내용과 시행일을 사전 고지합니다.</p>
+      </section>
+
+      <section>
+        <h2>12. 문의</h2>
         <div class="contact">
           개인정보 관련 문의:
           <a href="mailto:wkdwkd585@gmail.com">wkdwkd585@gmail.com</a>
